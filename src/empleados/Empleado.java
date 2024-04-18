@@ -1,5 +1,4 @@
 package empleados;
-
 import java.util.Scanner;
 
 // Definición de la clase Empleado
