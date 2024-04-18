@@ -4,20 +4,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // Variables para almacenar los detalles de los empleados
-        String admRegistro;
-        String admName;
-        String admDpto;
-        String admGerente;
-        double admSueldom;
         Scanner datos = new Scanner(System.in);
-
-
-        
         // Crear instancias de empleados
 
         // Crear un Scanner para obtener la entrada del usuario
         Scanner scanner = new Scanner(System.in);
-
         // Pedir al usuario que elija un empleado
         int eleccion;
         do {
