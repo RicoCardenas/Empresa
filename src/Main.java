@@ -3,10 +3,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // Variables para almacenar los detalles de los empleados
+        String admRegistro;
+        String admName;
+        String admDpto;
+        String admGerente;
+        double admSueldom;
+        Scanner datos = new Scanner(System.in);
+
+
+        
         // Crear instancias de empleados
-        EmpAdmvo empAdmvo = new EmpAdmvo("001", "Julian", "Administración", "Gerente", 5000.0);
-        EmpMecanico empMecanico = new EmpMecanico("002", "Felipe", "Taller", "Mecánico", 10000.0);
-        EmpVendedor empVendedor = new EmpVendedor("003", "Alejandra", "Ventas", "Vendedor", 20000.0);
 
         // Crear un Scanner para obtener la entrada del usuario
         Scanner scanner = new Scanner(System.in);
@@ -14,10 +21,10 @@ public class Main {
         // Pedir al usuario que elija un empleado
         int eleccion;
         do {
-            System.out.println("Por favor, elige un empleado:");
-            System.out.println("1. Julian");
-            System.out.println("2. Felipe");
-            System.out.println("3. Alejandra");
+            System.out.println("Por favor, sobre quien desea preguntar: ");
+            System.out.println("1. Adminstrador");
+            System.out.println("2. Mecanico");
+            System.out.println("3. Vendedor");
             System.out.println("0. Exit");
 
             // Obtener la elección del usuario
@@ -26,12 +33,15 @@ public class Main {
             // Usar un switch para manejar las diferentes opciones
             switch (eleccion) {
                 case 1:
+                    EmpAdmvo empAdmvo = new EmpAdmvo();
                     imprimirDetallesEmpleado(empAdmvo);
                     break;
                 case 2:
+                    EmpMecanico empMecanico = new EmpMecanico();
                     imprimirDetallesEmpleado(empMecanico);
                     break;
                 case 3:
+                    EmpVendedor empVendedor = new EmpVendedor();
                     imprimirDetallesEmpleado(empVendedor);
                     break;
                 case 0:
@@ -44,6 +54,7 @@ public class Main {
 
         } while (eleccion != 0);
     }
+
 
     // Método para imprimir los detalles de un empleado
     public static void imprimirDetallesEmpleado(Empleado empleado) {

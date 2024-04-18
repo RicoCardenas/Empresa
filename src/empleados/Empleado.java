@@ -1,5 +1,7 @@
 package empleados;
 
+import java.util.Scanner;
+
 // Definición de la clase Empleado
 public class Empleado {
     // Variables de instancia protegidas para almacenar el registro, nombre, departamento y puesto del empleado
@@ -9,13 +11,25 @@ public class Empleado {
     protected String puesto;
 
     // Constructor de la clase Empleado que inicializa las variables de instancia
-    public Empleado(String registro, String nombre, String departamento, String puesto) {
-        this.registro = registro; // Inicializa el registro del empleado
-        this.nombre = nombre; // Inicializa el nombre del empleado
-        this.departamento = departamento; // Inicializa el departamento del empleado
-        this.puesto = puesto; // Inicializa el puesto del empleado
+    public Empleado() {
+        solicitarDatosEmpleado();
     }
 
+    private void solicitarDatosEmpleado() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese el número de registro del empleado:");
+        this.registro = scanner.nextLine();
+
+        System.out.println("Ingrese el nombre del empleado:");
+        this.nombre = scanner.nextLine();
+
+        System.out.println("Ingrese el departamento del empleado:");
+        this.departamento = scanner.nextLine();
+
+        System.out.println("Ingrese el puesto del empleado:");
+        this.puesto = scanner.nextLine();
+    }
     // Métodos getter y setter para las variables de instancia
 
     // Devuelve el registro del empleado

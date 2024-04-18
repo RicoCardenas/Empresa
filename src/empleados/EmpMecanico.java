@@ -1,14 +1,18 @@
 package empleados;
 
+import java.util.Scanner;
+
 // Definición de la clase EmpMecanico que extiende de la clase Empleado
 public class EmpMecanico extends Empleado {
     // Variable de instancia privada para almacenar el valor de los trabajos realizados por el empleado mecánico
     private double valorTrabajos;
 
     // Constructor de la clase EmpMecanico que inicializa las variables de instancia
-    public EmpMecanico(String registro, String nombre, String departamento, String puesto, double valorTrabajos) {
-        super(registro, nombre, departamento, puesto); // Llama al constructor de la superclase Empleado
-        this.valorTrabajos = valorTrabajos; // Inicializa el valor de los trabajos del empleado mecánico
+    public EmpMecanico() {
+        super(); // Llama al constructor de la superclase Empleado
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese el valor de los trabajos realizados por: " + nombre);
+        this.valorTrabajos = scanner.nextDouble();
     }
 
     // Método getter para la variable de instancia valorTrabajos

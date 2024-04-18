@@ -1,4 +1,5 @@
 package empleados;
+import java.util.Scanner;
 
 // Definición de la clase EmpAdmvo que extiende de la clase Empleado
 public class EmpAdmvo extends Empleado {
@@ -6,9 +7,11 @@ public class EmpAdmvo extends Empleado {
     private double sueldoMensual;
 
     // Constructor de la clase EmpAdmvo que inicializa las variables de instancia
-    public EmpAdmvo(String registro, String nombre, String departamento, String puesto, double sueldoMensual) {
-        super(registro, nombre, departamento, puesto); // Llama al constructor de la superclase Empleado
-        this.sueldoMensual = sueldoMensual; // Inicializa el sueldo mensual del empleado administrativo
+    public EmpAdmvo() {
+        super(); // Llama al constructor de la superclase Empleado
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese el sueldo mensual de: " + nombre);
+        this.sueldoMensual = scanner.nextDouble();
     }
 
     // Método getter para la variable de instancia sueldoMensual

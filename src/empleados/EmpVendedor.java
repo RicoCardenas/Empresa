@@ -1,5 +1,7 @@
 package empleados;
 
+import java.util.Scanner;
+
 // Definición de la clase EmpVendedor que extiende de la clase Empleado
 public class EmpVendedor extends Empleado {
     // Variable de instancia privada para almacenar el valor de las ventas realizadas por el empleado vendedor
@@ -9,9 +11,11 @@ public class EmpVendedor extends Empleado {
     private static final double SALARIO_MINIMO = 1000.0; // Asumiendo un salario mínimo de 1000
 
     // Constructor de la clase EmpVendedor que inicializa las variables de instancia
-    public EmpVendedor(String registro, String nombre, String departamento, String puesto, double valorVentas) {
-        super(registro, nombre, departamento, puesto); // Llama al constructor de la superclase Empleado
-        this.valorVentas = valorVentas; // Inicializa el valor de las ventas del empleado vendedor
+    public EmpVendedor() {
+        super(); // Llama al constructor de la superclase Empleado
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese el valor de las ventas hechas por: "  + nombre);
+        this.valorVentas = scanner.nextDouble();
     }
 
     // Método getter para la variable de instancia valorVentas
