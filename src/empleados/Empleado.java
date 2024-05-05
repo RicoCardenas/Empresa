@@ -23,7 +23,7 @@ public class Empleado {
         System.out.println("Ingrese el nombre del empleado:");
         this.nombre = scanner.nextLine();
 
-        System.out.println("Ingrese el departamento del empleado:");
+        System.out.println("Ingrese el departamento del empleado xf:");
         this.departamento = scanner.nextLine();
 
         System.out.println("Ingrese el puesto del empleado:");
